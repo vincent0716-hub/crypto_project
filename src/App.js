@@ -26,13 +26,13 @@ function App() {
     <div className="App">
       <nav className={navbar ? 'fixed bg-[black] text-[#f3f2f4] w-full' : 'fixed w-full bg-[transparent] text-[#f3f2f4]'}>
         <div className='flex text-[20px] items-center justify-between
-        m-0 max-w-[100%] p-12
-        font-Grotesk 
+        m-0 max-w-[100%] p-7
+        font-Grotesk
         '>
           <a className='text-[2rem]'>
             COINDOM
           </a>
-          <ul className='flex gap-[4rem]  max-[750px]:hidden '>
+          <ul className='flex gap-[3rem]  max-[750px]:hidden font-extrabold  font-GroteskEB'>
             <li >
               <a className='hover:bg-clip-text hover:bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] hover:text-transparent hover:transition-all'>Home</a>
             </li>
@@ -47,7 +47,7 @@ function App() {
             </li>
           </ul>
           {/* cursor-pointer:改變鼠標當鼠標指向特定物件時 */}
-          <span className='flex gap-[2rem] text-[2rem] '>
+          <span className='flex gap-[1rem] text-[24px] '>
             <FaTwitter className='cursor-pointer max-[750px]:hidden'
              onMouseEnter={() => setIsHovered2(true)}
              onMouseLeave={() => setIsHovered2(false)}
