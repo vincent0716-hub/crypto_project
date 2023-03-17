@@ -1,13 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 import { FontAwesomeIcon, FaTwitter, FaDiscord, FaBars } from 'react-icons/fa';
-
-import React, { useState } from 'react'
+import axios from 'axios'
+import React, { useState, useEffect } from 'react'
 import Home from './pages/home'
 function App() {
   const [navbar, setNavbar] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [isHovered2, setIsHovered2] = useState(false);
+
+  const [post, setPost] = useState([]);
   const changeBackground = () => {
     console.log(window.scrollY)
     if (window.scrollY >= 5) {
@@ -22,6 +24,16 @@ function App() {
   } else {
     console.log('You are on the server,Cannot execute')
   }
+
+  useEffect(() => {
+    axios.get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false")
+    .then((res)=>{
+     console.log("api get",res)
+     setPost(res.data);
+    })
+    .catch(err => console.log("error",err))
+    
+   }, [])
   return (
     <div className="App">
       <nav className={navbar ? 'fixed bg-[black] text-[#f3f2f4] w-full' : 'fixed w-full bg-[transparent] text-[#f3f2f4]'}>
@@ -63,7 +75,7 @@ function App() {
 
         </div>
       </nav>
-      <Home></Home>
+      <Home post={post}></Home>
     </div>
   );
 }
