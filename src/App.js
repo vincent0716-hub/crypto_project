@@ -34,9 +34,10 @@ function App() {
     .catch(err => console.log("error",err))
     
    }, [])
+   
   return (
     <div className="App">
-      <nav className={navbar ? 'fixed bg-[black] text-[#f3f2f4] w-full' : 'fixed w-full bg-[transparent] text-[#f3f2f4]'}>
+      <nav className={navbar ? 'fixed bg-[black] text-[#f3f2f4] w-full z-[9999]' : 'fixed w-full bg-[transparent] text-[#f3f2f4] z-[9999]'}>
         <div className='flex text-[20px] items-center justify-between
         m-0 max-w-[100%] p-7
         font-Grotesk
@@ -74,7 +75,7 @@ function App() {
           </span>
 
         </div>
-      </nav>
+      </nav>{/**/} 
       <Home post={post}></Home>
     </div>
   );
