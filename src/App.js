@@ -14,6 +14,7 @@ import {
   FaSatelliteDish,
   FaChessQueen,
   FaBoxes,
+  FaAngleDown,
 } from "react-icons/fa";
 import { GrClose } from "react-icons/gr";
 import axios from "axios";
@@ -282,6 +283,16 @@ function App() {
               src={crypto2}
               className="max-[750px]:hidden animate-bounce absolute right-24 w-[8%] top-0"
             ></img>
+            <button
+              onClick={() => handleMarket("section2")}
+              className="min-[769px]:hidden text-[20px] font-Grotesk rounded-[100px] px-20 py-4 mt-12 bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-white "
+            >
+              <div className="flex">
+                {" "}
+                SEE PRICES{" "}
+                <FaAngleDown className="mt-1 ml-2 animate-bounce"></FaAngleDown>
+              </div>
+            </button>
           </div>
 
           {/** */}
@@ -319,7 +330,7 @@ function App() {
       </section>
       <section className="h-screen w-screen from-[#0f051d] to-[#130749] bg-gradient-to-b">
         <div className="bg-[] h-full w-full flex justify-center items-center">
-          <div className="h-[80%] w-[80%] bg-[] overflow-scroll container">
+          <div className="h-[80%] w-[80%] bg-[] overflow-scroll container max-[426px]:hidden">
             <h1 className="text-white font-extrabold  font-GroteskEB text-[32px] text-left">
               Market Update
             </h1>
@@ -363,6 +374,48 @@ function App() {
                     <p className="text-left absolute right-6">
                       $ {CryptoSource.market_cap}
                     </p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+          {/**mobile ver. */}
+          <div className="h-[80%] w-[80%] bg-[] overflow-scroll container min-[426px]:hidden">
+            <h1 className="text-white font-extrabold  font-GroteskEB text-[32px] text-left">
+              Market Update
+            </h1>
+            <div className=" relative mt-6 w-full h-12 bg-gradient-to-r from-[#2600fc] to-[#ff00ea] justify-center items-center text-white  flex font-extrabold  font-GroteskEB">
+              <h1 className="text-left absolute left-6">Coin</h1>
+              <h1 className="text-left absolute right-10">Price</h1>
+            </div>
+            {isLoading ? (
+              // Render loading animation or spinner while data is being fetched
+              <div className="loader mt-48"></div>
+            ) : (
+              // Render content once data is fetched
+              <div>
+                {post.map((CryptoSource) => (
+                  <div className="my-4 font-semibold flex border-b border-white relative  w-full h-12 justify-center items-center text-white ">
+                    {/***/}{" "}
+                    <img
+                      src={CryptoSource.image}
+                      className="text-left absolute left-6 w-[8%] m-0 p-0 "
+                    ></img>
+                    <p className="text-left absolute left-16">
+                      {CryptoSource.name}
+                    </p>
+                    <span
+                      className={
+                        CryptoSource.market_cap_change_percentage_24h > 0
+                          ? "text-[#09e509] p-1 w-[50px] text-left absolute right-[10%] "
+                          : "text-[red] p-1 text-left absolute right-[10%] w-[55px]"
+                      }
+                    >
+                      {caculation(
+                        CryptoSource.market_cap_change_percentage_24h
+                      )}
+                      %
+                    </span>
                   </div>
                 ))}
               </div>
@@ -607,7 +660,7 @@ function App() {
               DISCORD
             </span>
           </h1>
-          <p className="text-[22px] text-white mt-4 font-Grotesk">
+          <p className="text-[22px] text-white mt-4 font-Grotesk mx-12">
             Invest and manage all your crypto at one place
           </p>
           <img
