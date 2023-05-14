@@ -279,7 +279,7 @@ function App() {
               src={crypto1}
               className="max-[750px]:hidden animate-bounce absolute w-[8%] left-24"
             ></img>
-            <h1 className="text-white text-[105px] font-Grotesk m-0 p-0 min-[375px]:px-[10%] min-[375px]:text-5xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl ">
+            <h1 className="text-white text-[105px] font-Grotesk m-0 p-0 min-[375px]:px-[10%] min-[32px]:text-4xl min-[375px]:text-5xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl ">
               TRACK AND TRADE
               <br></br>
               <span className="bg-clip-text bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-transparent transition-all">
@@ -293,7 +293,7 @@ function App() {
             ></img>
             <button
               onClick={() => handleMarket("section2")}
-              className="min-[769px]:hidden text-[20px] font-Grotesk rounded-[100px] px-20 py-4 mt-12 bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-white "
+              className="min-[769px]:hidden text-[20px] font-Grotesk rounded-[100px] max-[320px]:px-12 px-20 py-4 mt-12 bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-white "
             >
               <div className="flex">
                 {" "}
@@ -433,7 +433,7 @@ function App() {
       </section>
       <section className="min-[1024px]:h-screen w-screen from-[#0f051d] to-[#130749] bg-gradient-to-t">
         <div className="w-full h-full">
-          <div className="font-Grotesk w-full h-[15%] bg-[] flex justify-center items-center text-white text-[70px] text-center">
+          <div className="font-Grotesk w-full h-[15%] bg-[] flex justify-center items-center text-white text-[70px] text-center max-[320px]:text-[30px] max-[320px]:mb-24">
             <h1>
               WHY{" "}
               <span className="bg-clip-text bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-transparent transition-all">
@@ -545,11 +545,12 @@ function App() {
             </div>
           </div>
 
+          {/**mobile ver */}
           <div className="w-full h-full flex bg-[]  justify-center items-center min-[1024px]:hidden">
             <div className="w-[80%] h-full bg-yellow  ">
               <div className="w-full h-full bg-[] ">
-                <div className="bg-[#232136] mb-6  min-w-[330px] w-full  rounded-[20px] border-2 border-[#393844] flex">
-                  <div className="flex p-8">
+                <div className="bg-[#232136] mb-6  w-full  rounded-[20px] border-2 border-[#393844] flex">
+                  <div className="flex  pt-8 pl-8 pb-8 max-[321px]:hidden">
                     <div className="h-full ">
                       <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4">
                         <FaWallet className="w-8 h-8 "></FaWallet>
@@ -562,10 +563,25 @@ function App() {
                       </p>
                     </div>
                   </div>
+                  <div className="  min-[321px]:hidden  justify-center items-center flex">
+                    <div className="h-full ">
+                      <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4 ">
+                        <FaWallet className="w-8 h-8 "></FaWallet>
+                      </div>
+                    </div>
+                    <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center ">
+                      <h4 className="text-[25px] max-[320px]:text-[16px]">
+                        CONNECT YOUE WALLET
+                      </h4>
+                      <p className="text-[18px] text-[#e7e6e8] mt-2 max-[320px]:text-[12px]">
+                        Use Trust Wallet, Metamask or to connect to the app.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="bg-[#232136] mb-6  min-w-[330px] w-full rounded-[20px] border-2 border-[#393844] flex">
-                  <div className="flex p-8">
+                <div className="bg-[#232136] mb-6  w-full rounded-[20px] border-2 border-[#393844] flex">
+                  <div className="flex  pt-8 pl-8 pb-8 max-[321px]:hidden">
                     <div className="h-full ">
                       <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4">
                         <FaPencilRuler className="w-8 h-8 "></FaPencilRuler>
@@ -579,10 +595,26 @@ function App() {
                       </p>
                     </div>
                   </div>
+                  <div className="  min-[321px]:hidden  justify-center items-center flex">
+                    <div className="h-full ">
+                      <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4 ">
+                        <FaPencilRuler className="w-8 h-8 "></FaPencilRuler>
+                      </div>
+                    </div>
+                    <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center ">
+                      <h4 className="text-[25px] max-[320px]:text-[16px]">
+                        SELECT YOUR QUANTITY
+                      </h4>
+                      <p className="text-[18px] text-[#e7e6e8] mt-2 max-[320px]:text-[12px]">
+                        Upload your crypto and set a title, description and
+                        price.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="bg-[#232136] mb-6  min-w-[330px] w-full rounded-[20px] border-2 border-[#393844] flex">
-                  <div className="flex p-8">
+                <div className="bg-[#232136] mb-6  w-full rounded-[20px] border-2 border-[#393844] flex">
+                  <div className="flex pt-8 pl-8 pb-8 max-[321px]:hidden">
                     <div className="h-full ">
                       <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4">
                         <FaBolt className="w-8 h-8 "></FaBolt>
@@ -595,9 +627,25 @@ function App() {
                       </p>
                     </div>
                   </div>
+                  <div className="  min-[321px]:hidden  justify-center items-center flex">
+                    <div className="h-full ">
+                      <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4 ">
+                        <FaBolt className="w-8 h-8 "></FaBolt>
+                      </div>
+                    </div>
+                    <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center max-[320px]:text-[16px] ">
+                      <h4 className="text-[25px] max-[320px]:text-[16px]">
+                        CONFIRM TRANSACTION
+                      </h4>
+                      <p className="text-[18px] text-[#e7e6e8] mt-2 max-[320px]:text-[12px]">
+                        Earn by selling your crypto on our marketplace.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div className="bg-[#232136] mb-6   min-w-[330px] w-full  rounded-[20px] border-2 border-[#393844] flex">
-                  <div className="flex p-8">
+
+                <div className="bg-[#232136] mb-6 w-full  rounded-[20px] border-2 border-[#393844] flex">
+                  <div className="flex  pt-8 pl-8 pb-8 max-[321px]:hidden">
                     <div className="h-full ">
                       <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4">
                         <FaSatelliteDish className="w-8 h-8 "></FaSatelliteDish>
@@ -610,10 +658,25 @@ function App() {
                       </p>
                     </div>
                   </div>
+                  <div className="  min-[321px]:hidden  justify-center items-center flex">
+                    <div className="h-full ">
+                      <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4 ">
+                        <FaSatelliteDish className="w-8 h-8 "></FaSatelliteDish>
+                      </div>
+                    </div>
+                    <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center ">
+                      <h4 className="text-[25px] max-[320px]:text-[16px]">
+                        RECEIVE YOUR OWN NFTS
+                      </h4>
+                      <p className="text-[18px] text-[#e7e6e8] mt-2 max-[320px]:text-[12px]">
+                        Invest all your crypto at one place on one platform.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="bg-[#232136] mb-6  min-w-[330px] w-full rounded-[20px] border-2 border-[#393844] flex">
-                  <div className="flex p-8">
+                <div className="bg-[#232136] mb-6   w-full rounded-[20px] border-2 border-[#393844] flex">
+                  <div className="flex  pt-8 pl-8 pb-8 max-[321px]:hidden">
                     <div className="h-full ">
                       <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4">
                         <FaChessQueen className="w-8 h-8 "></FaChessQueen>
@@ -627,10 +690,26 @@ function App() {
                       </p>
                     </div>
                   </div>
+                  <div className="  min-[321px]:hidden  justify-center items-center flex">
+                    <div className="h-full ">
+                      <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4 ">
+                        <FaChessQueen className="w-8 h-8 "></FaChessQueen>
+                      </div>
+                    </div>
+                    <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center ">
+                      <h4 className="text-[25px] max-[320px]:text-[16px]">
+                        TAKE A MARKET TO SELL
+                      </h4>
+                      <p className="text-[18px] text-[#e7e6e8] mt-2 max-[320px]:text-[12px]">
+                        Discover, collect the right crypto collections to buy or
+                        sell.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="bg-[#232136] mb-6  min-w-[330px] w-full  rounded-[20px] border-2 border-[#393844] flex">
-                  <div className="flex p-8">
+                <div className="bg-[#232136] mb-6   w-full  rounded-[20px] border-2 border-[#393844] flex">
+                  <div className="flex  pt-8 pl-8 pb-8 max-[321px]:hidden">
                     <div className="h-full ">
                       <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4">
                         <FaBoxes className="w-8 h-8 "></FaBoxes>
@@ -639,6 +718,22 @@ function App() {
                     <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center ">
                       <h4 className="text-[25px]">DRIVE YOUR COLLECTION</h4>
                       <p className="text-[18px] text-[#e7e6e8] mt-4">
+                        We make it easy to Discover, Invest and manage.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="  min-[321px]:hidden  justify-center items-center flex">
+                    <div className="h-full ">
+                      <div className="text-white bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] rounded-[20px] p-4 ">
+                        <FaBoxes className="w-8 h-8 "></FaBoxes>
+                      </div>
+                    </div>
+                    <div className=" h-full pl-6 font-GroteskEB text-white text-left justify-center items-center ">
+                      <h4 className="text-[25px] max-[320px]:text-[16px]">
+                        DRIVE YOUR COLLECTION
+                      </h4>
+                      <p className="text-[18px] text-[#e7e6e8] mt-2 max-[320px]:text-[12px]">
                         We make it easy to Discover, Invest and manage.
                       </p>
                     </div>
@@ -660,7 +755,7 @@ function App() {
             src={crypto1}
             className="max-[750px]:hidden animate-bounce absolute w-[8%] left-[300px]"
           ></img>
-          <h1 className="text-white text-[105px] font-Grotesk m-0 p-0 min-[375px]:px-[10%] min-[375px]:text-5xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl ">
+          <h1 className="text-white text-[105px] font-Grotesk m-0 p-0  min-[25px]:px-[10%] min-[250px]:text-4xl min-[375px]:px-[10%] min-[375px]:text-5xl min-[320px]:px-[10%] min-[320px]:text-4xl  sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl ">
             JOIN US VIA
             <br></br>
             <span className="bg-clip-text bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-transparent transition-all">
