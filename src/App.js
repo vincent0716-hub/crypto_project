@@ -483,7 +483,7 @@ function App() {
             </div>
           </div>
 
-          <div className="w-full h-full flex bg-[#a9edf6]  justify-center items-center min-[1024px]:hidden">
+          <div className="w-full h-full flex bg-[]  justify-center items-center min-[1024px]:hidden">
             <div className="w-[80%] h-full bg-yellow  ">
               <div className="w-full h-full bg-[] ">
                 <div className="bg-[#232136] mb-6  min-w-[330px] w-full  rounded-[20px] border-2 border-[#393844] flex">
@@ -613,9 +613,11 @@ function App() {
             src={crypto2}
             className="max-[750px]:hidden animate-bounce absolute right-[300px] w-[8%] top-0"
           ></img>
-          <button className="text-[20px] font-Grotesk rounded-[100px] px-12 py-4 mt-24 bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-white ">
-            Join Via Discord
-          </button>
+          <a href="https://discord.com/">
+            <button className="text-[20px] font-Grotesk rounded-[100px] px-12 py-4 mt-24 bg-gradient-to-tr from-[#2600fc] to-[#ff00ea] text-white ">
+              Join Via Discord
+            </button>
+          </a>
         </div>
       </section>{" "}
       <footer className="h-auto flex w-screen bg-gradient-to-t from-[#0f051d] to-[#130749]  relative ">
