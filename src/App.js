@@ -139,8 +139,16 @@ function App() {
         className="absolute w-full h-[10px] bg-[] top-[700px]"
       ></div>
       <div
+        id="sectionM2"
+        className="absolute w-full h-[10px] bg-[] top-[900px]"
+      ></div>
+      <div
         id="section3"
         className="absolute w-full h-[10px] bg-[] top-[1400px]"
+      ></div>
+      <div
+        id="sectionM3"
+        className="absolute w-full h-[10px] bg-[] top-[1550px]"
       ></div>
       <div
         id="section4"
@@ -148,7 +156,7 @@ function App() {
       ></div>
       <div
         id="section5"
-        className="absolute w-full h-[10px] bg-[] top-[3400px]"
+        className="absolute w-full h-[10px] bg-[] top-[3600px]"
       ></div>
       <nav
         className={
@@ -250,7 +258,7 @@ function App() {
               <h1 onClick={() => handleMarketM("section2")} className="mt-12">
                 MARKET
               </h1>
-              <h1 onClick={() => handleChooseM("section3")} className="mt-12">
+              <h1 onClick={() => handleChooseM("sectionM3")} className="mt-12">
                 CHOOSE US
               </h1>
               <h1 onClick={() => handleJoinM("section5")} className="mt-12">
