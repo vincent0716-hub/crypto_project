@@ -36,7 +36,7 @@ const home = (props) => {
 
         <div className='max-[600px]:hidden max-[750px]:gap-[50%] max-[750px]:px-48 max-w-5xl mt-72 px-12 mx-auto  items-center justify-between text-white  flex max-[750px]:grid max-[750px]:grid-cols-2'>
          
-         {
+         {/*{
           crypto4data.map(CryptoSource =>
             <a className='w-[10%] max-[750px]:w-[100%] font-Grotesk items-center justify-center'>
             <img src={CryptoSource.image} className=' m-0 p-0 '></img>
@@ -52,56 +52,11 @@ const home = (props) => {
 
           </a>
           )
-         }{/*
-          <a className='w-[10%] max-[750px]:w-[100%] font-Grotesk'>
-            <img src={props.post[0].image} className=' m-0 p-0 '></img>
-            <p>
-              {props.post[0].name}
-              <span className={
-                'p-2 '}>
+         }*/}
+         
 
-                {props.post[0].market_cap_change_percentage_24h}
-              </span><br></br>
-              ${props.post[0].current_price}
-            </p>
 
-          </a>
-          <a className='w-[10%] max-[750px]:w-[100%]'>
-
-            <img src={props.post[0].image}></img>
-            <p>
-              {props.post[0].name}
-              <span>
-
-                {props.post[0].market_cap_change_percentage_24h}
-              </span><br></br>
-              {props.post[0].current_price}
-            </p>
-          </a>
-
-          <a className='w-[10%] max-[750px]:w-[100%]'>
-            <img src={props.post[0].image} className=' m-0 p-0 '></img>
-            <p>
-              {props.post[0].name}
-              <span>
-                {props.post[0].market_cap_change_percentage_24h}
-              </span><br></br>
-              {props.post[0].current_price}
-            </p>
-
-          </a>
-
-          <a className='w-[10%] max-[750px]:w-[100%]'>
-            <img src={props.post[0].image} className=' m-0 p-0 '></img>
-            <p>
-              {props.post[0].name}
-              <span>
-                {props.post[0].market_cap_change_percentage_24h}
-              </span><br></br>
-              {props.post[0].current_price}
-            </p>
-
-          </a> */}
+         
 
 
         </div>
