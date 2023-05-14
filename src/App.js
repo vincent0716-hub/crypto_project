@@ -129,6 +129,7 @@ function App() {
 
   ///////database connection
 
+  /// git add . -> git status -> git commit -m "xxx" -> git push crypto
   return (
     <div className="App">
       <div id="section1" className="absolute w-full h-[10px] bg-[] top-0"></div>
