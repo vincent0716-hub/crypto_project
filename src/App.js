@@ -132,7 +132,7 @@ function App() {
 
   /// git add . -> git status -> git commit -m "xxx" -> git push crypto
   return (
-    <div className="App">
+    <div className="App bg-[#0f051d]">
       <div id="section1" className="absolute w-full h-[10px] bg-[] top-0"></div>
       <div
         id="section2"
@@ -682,8 +682,8 @@ function App() {
           </a>
         </div>
       </section>{" "}
-      <footer className="h-auto flex w-screen bg-gradient-to-t from-[#0f051d] to-[#130749]  relative ">
-        <img src={box1} className=" left-0 top-12 w-[20%]"></img>
+      <section className="h-auto flex w-screen bg-gradient-to-t from-[#0f051d] to-[#130749]  relative ">
+        <img src={box1} className="relative left-0  w-[20%]"></img>
         <div className="w-full bg-[]  flex items-center justify-center">
           {" "}
           <div className="relative ">
@@ -735,8 +735,8 @@ function App() {
           </div>
         </div>
 
-        <img src={box2} className=" right-0 top-10 w-[20%]"></img>
-      </footer>
+        <img src={box2} className="relative right-0  w-[20%] "></img>
+      </section>
     </div>
   );
 }
