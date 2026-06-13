@@ -1,4 +1,3 @@
-function editNumber(number) {
+export function editNumber(number) {
   return number.toLocaleString("en-US");
 }
-export default editNumber;

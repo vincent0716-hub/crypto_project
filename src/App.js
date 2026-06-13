@@ -28,7 +28,7 @@ import box1 from "./components/box1.png";
 import box2 from "./components/box2.png";
 import choose from "./components/choose.png";
 import { Router, Routes, Route, Link } from "react-router-dom";
-import editNumber from "./utils/FormatNumber";
+import { editNumber } from "./utils/FormatNumber";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [navbar, setNavbar] = useState(false);
