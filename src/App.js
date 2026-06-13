@@ -941,11 +941,10 @@ function App() {
               <footer
                 className={
                   color
-                    ? "h-screen w-screen from-[#130749] to-[#0f051d] bg-gradient-to-b"
+                    ? "h-[100vm] flex w-screen from-[#130749] to-[#0f051d] bg-gradient-to-b"
                     : "h-[100vm] flex w-screen bg-gradient-to-t from-[#b231d9] to-[#7136c3]  "
                 }
               >
-                <img src={box1} className="relative left-0  w-[20%]"></img>
                 <div className="w-full bg-[]  flex items-center justify-center">
                   {" "}
                   <div className="relative ">
@@ -999,8 +998,6 @@ function App() {
                     </div>
                   </div>
                 </div>
-
-                <img src={box2} className="relative right-0  w-[20%] "></img>
               </footer>{" "}
             </div>
           }
