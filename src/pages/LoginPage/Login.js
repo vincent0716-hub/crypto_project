@@ -30,6 +30,10 @@ const Login = () => {
       parallaxInstance.destroy();
     };
   }, []);*/
+  const handleinput = (e) => {
+    const value = e.target.value;
+    console.log(value);
+  };
   return (
     <Layout>
       {/** */}{" "}
@@ -73,6 +77,7 @@ const Login = () => {
             </div>
             <div>
               <input
+                onChange={handleinput}
                 type="password"
                 placeholder="Password"
                 className="relative w-full px-[15px] py-[20px] outline-none text-[1.25em] text-[#ffffff] rounded-[5px] inputbox"
