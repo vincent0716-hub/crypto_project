@@ -28,7 +28,7 @@ import box1 from "./components/box1.png";
 import box2 from "./components/box2.png";
 import choose from "./components/choose.png";
 import { Router, Routes, Route, Link } from "react-router-dom";
-import formatNumber from "./utils/formatNumber";
+import FormatNumber from "./utils/FormatNumber";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [navbar, setNavbar] = useState(false);
@@ -493,7 +493,7 @@ function App() {
                               %
                             </span>
                             <p className="text-left absolute right-6">
-                              $ {formatNumber(CryptoSource.market_cap)}
+                              $ {FormatNumber(CryptoSource.market_cap)}
                             </p>
                           </div>
                         ))}
